@@ -1,0 +1,57 @@
+{
+  "prediction": {
+    "policy_id": null,
+    "predicted_status": "Surrender",
+    "status_code": 2,
+    "confidence": 0.9999992370873801,
+    "class_probabilities": {
+      "Not Churned": 6.464407718359262e-7,
+      "Lapsed": 9.250049605670172e-8,
+      "Surrender": 0.9999992370873801,
+      "Cancelled": 2.3971351963868185e-8
+    }
+  },
+  "explanation": {
+    "policy_id": null,
+    "predicted_status": "Surrender",
+    "retention_drivers_stay": [
+      {
+        "feature": "withdrawal_to_premium_ratio",
+        "value": 0.8181818181446281,
+        "shap_impact": 15.813044995149301
+      },
+      {
+        "feature": "total_withdrawal_amount",
+        "value": 18000,
+        "shap_impact": 3.392427087678303
+      },
+      {
+        "feature": "is_under_2yr_uls",
+        "value": 0,
+        "shap_impact": 0.13357256934724343
+      }
+    ],
+    "churn_risk_drivers_churn": [
+      {
+        "feature": "total_sum_insured",
+        "value": 250000,
+        "shap_impact": -0.04115437421384085
+      },
+      {
+        "feature": "alteration_retention_ratio",
+        "value": 0.33333322222225925,
+        "shap_impact": -0.015088378597288307
+      },
+      {
+        "feature": "alterations_count",
+        "value": 3,
+        "shap_impact": -0.01020555278767876
+      }
+    ],
+    "actionable_routing": {
+      "prediction_insight": "The policy for ID None is predicted to be 'Surrender'.",
+      "next_steps_suggestion": "Contact customer to understand reasons for surrender. Offer alternatives like premium reduction or policy alterations. Focus on high-value retention drivers. High withdrawal activity detected and contributing significantly to current status; assess financial distress.",
+      "flagged_for_review": true
+    }
+  }
+}
